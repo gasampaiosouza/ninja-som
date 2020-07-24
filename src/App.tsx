@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
+import Header from './components/Header';
 
 const App = () => (
-  <main>
-    <h1>Hello world!</h1>
-  </main>
+  <>
+    <Header />
+  </>
 );
 
 export default App;
