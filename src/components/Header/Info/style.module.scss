@@ -1,0 +1,97 @@
+@import '../../../config.scss';
+
+.info {
+  position: relative;
+  width: 85%;
+
+  @include flex(space-between, $direction: row);
+  padding: 15px $default-spacing;
+  color: $main-color;
+
+  > .logo {
+    min-width: 135px;
+  }
+
+  > .input {
+    width: 340px;
+
+    input {
+      font-size: 1.05em;
+      padding: 15px 0;
+      width: 100%;
+    }
+
+    .icon {
+      width: 18px;
+    }
+  }
+
+  > .whatsapp {
+    @include flex($direction: row);
+    font-size: 1em;
+
+    &-icon {
+      margin-right: 15px;
+    }
+  }
+
+  .user {
+    display: flex;
+
+    &-avatar {
+      margin-right: 15px;
+    }
+
+    &-text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      letter-spacing: 1px;
+    }
+  }
+
+  .cart {
+    position: absolute;
+    top: 0;
+    right: 0 - 75px;
+
+    cursor: pointer;
+    width: 100px;
+    @include flex(space-between, $direction: column);
+
+    background: $main-color;
+    height: 100px;
+    color: #fff;
+    padding: 20px 10px;
+    box-shadow: 2px 2px 5px rgba($main-color, 0.25);
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    display: grid;
+    gap: 25px;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+    .input {
+      width: 100%;
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
+
+    .cart {
+      position: relative;
+      right: 0;
+      width: 100%;
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  @media (max-width: 750px) {
+    $default-spacing: 25px;
+
+    padding: 0 $default-spacing;
+  }
+}
