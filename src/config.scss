@@ -13,12 +13,16 @@ $default-spacing: 140px;
   cursor: pointer;
   position: relative;
   background: transparent;
+  border-radius: 5px;
   padding: 15px 45px;
 
+  transition: 0.1s ease-in-out;
+
   @if $type == banner {
-    $color: rgba(#fff, 0.75);
+    // white 75%
+    $color: #f8f8f8;
+
     color: $color;
-    transition: outline 0.1s ease-in-out;
     border: 2px solid transparent;
 
     &::after {
@@ -34,8 +38,14 @@ $default-spacing: 140px;
     }
 
     &:hover {
-      border-radius: 5px;
       border: 2px solid $color;
+    }
+  } @else {
+    border: 2px solid #fff;
+
+    &:hover {
+      color: $main-color !important;
+      background: #fff;
     }
   }
 }
