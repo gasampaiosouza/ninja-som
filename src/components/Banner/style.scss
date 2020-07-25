@@ -1,0 +1,118 @@
+@import '../../config.scss';
+
+$banner-height: 650px;
+
+.slider {
+  height: $banner-height !important;
+
+  .previousButton polygon,
+  .nextButton polygon {
+    fill: #fff;
+  }
+}
+
+.banner {
+  height: $banner-height;
+  position: relative;
+  padding: 50px 0;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    place-items: center;
+
+    &-content {
+      text-align: center;
+    }
+
+    &-image {
+      height: 100%;
+      width: initial;
+    }
+  }
+}
+
+.banner-content {
+  padding: 0 $default-spacing;
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  @include flex($direction: column);
+
+  > span {
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+  }
+
+  > .highlight {
+    font-size: 4em;
+
+    &.sub-title {
+      margin-bottom: 35px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+
+    > .highlight {
+      font-size: 2em;
+    }
+  }
+
+  @media (max-width: 750px) {
+    $default-spacing: 25px;
+
+    padding: 0 $default-spacing;
+  }
+}
+
+.button {
+  @include button(banner);
+}
+
+// .animateIn .banner-content {
+//   h1 {
+//     animation: top-bottom 1s ease-in-out;
+//   }
+// }
+
+// .animateOut .banner-content {
+//   h1 {
+//     animation: bottom-top 1s ease-in-out;
+//   }
+// }
+
+// @keyframes bottom-top {
+//   from {
+//     transform: none;
+//   }
+
+//   to {
+//     opacity: 0;
+//     transform: translateY(-25px);
+//   }
+// }
+
+// @keyframes top-bottom {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-25px);
+//   }
+
+//   to {
+//     transform: none;
+//   }
+// }
