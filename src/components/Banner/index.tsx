@@ -47,7 +47,7 @@ const renderBanners = ({ small, title, subTitle, cta, image }) => (
   <div className="banner">
     <div className="banner-content">
       <span className="light">{small}</span>
-      <h1 className="title highlight">{title}</h1>
+      <h1 className="title bold highlight">{title}</h1>
       <h1 className="light sub-title highlight">{subTitle}</h1>
 
       <button className="button">{cta}</button>
