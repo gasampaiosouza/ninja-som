@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-import guitarrist from '../../assets/categories/guitar.png';
+import guitarrist from '../../assets/categories/guitarrist.png';
 import microphone from '../../assets/categories/microphone.png';
 import soundTable from '../../assets/categories/sound-table.png';
 import keyboard from '../../assets/categories/keyboard.png';
