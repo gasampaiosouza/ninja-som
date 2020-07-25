@@ -1,0 +1,10 @@
+$main-color: #041e50;
+$font: Lato, Inter, -apple-system, Arial, sans-serif;
+$default-spacing: 140px;
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
