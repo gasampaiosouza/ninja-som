@@ -1,0 +1,47 @@
+@import '../../config.scss';
+
+.categories {
+  padding: 25px $default-spacing;
+  @include flex(space-between);
+  flex-wrap: wrap;
+
+  .box {
+    height: 150px;
+    @include flex(space-between, $direction: column);
+
+    &:not(:nth-child(1)):not(:nth-last-child(1)) {
+      margin: 15px;
+    }
+
+    &:hover > .box-label {
+      opacity: 1;
+    }
+
+    &:hover > .box-image {
+      border: 2px solid rgba($main-color, 0.75);
+    }
+
+    &-image {
+      padding: 10px;
+      width: 116px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+
+      @media (max-width: 700px) {
+        width: 150px;
+      }
+    }
+
+    &-label {
+      color: $main-color;
+      opacity: 0.5;
+      letter-spacing: 1px;
+      font-size: 1.4em;
+    }
+
+    @media (max-width: 1100px) {
+      margin: 35px 0 !important;
+      justify-content: center !important;
+    }
+  }
+}
