@@ -61,3 +61,15 @@ a:focus {
   // ie6
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
+
+.regular {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.btn {
+  @include button();
+}
