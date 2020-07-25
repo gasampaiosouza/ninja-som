@@ -1,0 +1,60 @@
+@import '../../../config.scss';
+
+.top-bar {
+  color: #fff;
+  min-height: 40px;
+  background: $main-color;
+  padding: 0 $default-spacing;
+
+  @include flex($justify: space-between);
+
+  &-icon {
+    margin-right: 15px;
+    height: 18px;
+  }
+
+  &-text {
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 13px;
+  }
+
+  &-item {
+    position: relative;
+    @include flex();
+
+    &:not(:nth-child(1))::before {
+      content: '';
+      width: 1px;
+      height: 15px;
+      background: rgba(#c4c4c4, 0.4);
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &:not(:first-of-type):not(:last-of-type) {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-item {
+      margin: 15px 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    $default-spacing: 25px;
+
+    padding: 0 $default-spacing;
+  }
+}
