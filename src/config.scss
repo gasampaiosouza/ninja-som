@@ -8,3 +8,34 @@ $default-spacing: 140px;
   align-items: $align;
   flex-direction: $direction;
 }
+
+@mixin button($type: default) {
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  padding: 15px 45px;
+
+  @if $type == banner {
+    $color: rgba(#fff, 0.75);
+    color: $color;
+    transition: outline 0.1s ease-in-out;
+    border: 2px solid transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -2px;
+
+      transform: translate(-50%);
+      background: $color;
+      width: 50%;
+      height: 2px;
+    }
+
+    &:hover {
+      border-radius: 5px;
+      border: 2px solid $color;
+    }
+  }
+}
