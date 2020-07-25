@@ -1,8 +1,9 @@
 @import '../../../config.scss';
 
 .info {
+  $info-width: 85%;
   position: relative;
-  width: 85%;
+  width: $info-width;
 
   @include flex(space-between, $direction: row);
   padding: 15px $default-spacing;
@@ -54,7 +55,7 @@
   .cart {
     position: absolute;
     top: 0;
-    right: 0 - 75px;
+    right: -$default-spacing + 100px / 3;
 
     cursor: pointer;
     width: 100px;
