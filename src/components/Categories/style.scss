@@ -6,12 +6,9 @@
   flex-wrap: wrap;
 
   .box {
+    margin: 25px;
     height: 150px;
     @include flex(space-between, $direction: column);
-
-    &:not(:nth-child(1)):not(:nth-last-child(1)) {
-      margin: 15px;
-    }
 
     &:hover > .box-label {
       opacity: 1;
@@ -40,10 +37,9 @@
 
       transition: opacity 0.2s ease-in-out;
     }
+  }
 
-    @media (max-width: 1100px) {
-      margin: 35px 0 !important;
-      justify-content: center !important;
-    }
+  @media (max-width: 1300px) {
+    justify-content: center !important;
   }
 }
