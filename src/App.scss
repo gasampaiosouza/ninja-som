@@ -31,6 +31,10 @@ a:focus {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 .input {
   @include flex(space-between);
 
