@@ -1,0 +1,99 @@
+@import '../../config.scss';
+
+#comments {
+  margin-top: 25px;
+  color: $main-color;
+
+  .slider {
+    height: 200px !important;
+    .previousButton polygon,
+    .nextButton polygon {
+      fill: $main-color;
+    }
+
+    @media (max-width: 800px) {
+      height: 300px !important;
+    }
+  }
+
+  .wrapper {
+    padding: 0 $default-spacing;
+
+    @media (max-width: 700px) {
+      $default-spacing: 25px;
+      padding: 0 $default-spacing;
+    }
+  }
+
+  .comments-box {
+    @include flex();
+
+    padding: 15px 72px;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 10px rgba($main-color, 0.3);
+
+    border-radius: 5px;
+
+    .user {
+      display: flex;
+
+      &-content {
+        @include flex($direction: column, $align: flex-start);
+        margin-right: 25px;
+
+        .user-name {
+          font-size: 1.5em;
+        }
+
+        .user-role {
+          font-size: 1em;
+        }
+      }
+
+      &-image {
+        margin-right: 12px;
+        width: 80px;
+      }
+    }
+
+    .comment {
+      max-width: 550px;
+      $comment-box-color: #fff;
+
+      position: relative;
+      font-size: 1.3em;
+      line-height: 20px;
+      background: $comment-box-color;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba($main-color, 0.3);
+      border-radius: 5px;
+
+      &::before {
+        $square-size: 15px;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+
+        width: $square-size;
+        height: $square-size;
+        background: $comment-box-color;
+        border-radius: 2px;
+        box-shadow: 0 7px 6px rgba($main-color, 0.1);
+      }
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+
+      .user {
+        margin-bottom: 25px;
+      }
+
+      .comment::before {
+        display: none;
+      }
+    }
+  }
+}
