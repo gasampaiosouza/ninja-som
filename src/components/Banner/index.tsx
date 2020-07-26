@@ -5,7 +5,7 @@ import 'react-animated-slider/build/horizontal.css';
 
 import table from '../../assets/banner/table.jpg';
 import guitarrist from '../../assets/banner/guitarrist.jpg';
-import banner from '../../assets/banner/main-banner.png';
+import banner from '../../assets/banner/main-banner.jpg';
 import piano from '../../assets/banner/piano.jpg';
 import guitar from '../../assets/banner/guitar.jpg';
 
