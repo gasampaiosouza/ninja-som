@@ -1,0 +1,45 @@
+@keyframes appear-top {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes appear-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes disappear-top {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes disappear-bottom {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
