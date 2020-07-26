@@ -36,7 +36,8 @@
         font-size: 1.8em;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         box-shadow: 2px 2px 15px rgba($main-color, 0.25);
 
         .search-overlay {
