@@ -24,7 +24,7 @@ const Companies: React.FC = () => {
         readable
       </p>
 
-      <Slider infinite={true}>
+      <Slider>
         <div className="content">
           <img src={akg} alt="akg logo" />
           <img src={roland} alt="roland logo" />
