@@ -5,7 +5,7 @@
   position: relative;
   width: $info-width;
 
-  @include flex(space-between, $direction: row);
+  @include flex(space-between);
   padding: 15px $default-spacing;
   color: $main-color;
 
@@ -28,7 +28,7 @@
   }
 
   > .whatsapp {
-    @include flex($direction: row);
+    @include flex();
     font-size: 1em;
 
     &-icon {
