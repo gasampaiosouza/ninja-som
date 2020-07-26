@@ -1,0 +1,20 @@
+@import '../../config.scss';
+
+#about {
+  padding: 0 $default-spacing;
+  color: $main-color;
+  @include flex($direction: column);
+
+  .section-paragraph {
+    color: #212121;
+    max-width: 1000px;
+    text-align: center;
+    opacity: 0.75;
+    line-height: 25px;
+  }
+
+  @media (max-width: 700px) {
+    $default-spacing: 25px;
+    padding: 0 $default-spacing;
+  }
+}
