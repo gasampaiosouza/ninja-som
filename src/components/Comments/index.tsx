@@ -4,21 +4,21 @@ import './style.scss';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
-import userImage from '../../assets/user-image.png';
+import userImage1 from '../../assets/users/user1-image.jpg';
 
 const Comments: React.FC = () => {
   const users = [
     {
-      image: userImage,
+      image: userImage1,
       name: 'Felipe Salmim',
       role: 'Designer',
       comment: `Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
       and a search for ‘lorem ipsum’`,
     },
     {
-      image: userImage,
-      name: 'Felipe Salmim',
-      role: 'Designer',
+      image: userImage1,
+      name: 'Pedro Pereira',
+      role: 'Full-stack',
       comment: `Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
       and a search for ‘lorem ipsum’`,
     },
