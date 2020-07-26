@@ -1,0 +1,60 @@
+@import '../../config.scss';
+
+#news {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
+  .news-box {
+    color: #fff;
+
+    @include flex($direction: column);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.audio-box {
+      background-image: url('../../assets/audio-image.jpg');
+    }
+
+    &.instruments-box {
+      background-image: url('../../assets/guitarrist-image.jpg');
+    }
+
+    .label {
+      position: relative;
+      font-size: 1.4em;
+      letter-spacing: 6px;
+      margin-bottom: 25px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 25%;
+        height: 2px;
+        background: #fff;
+        left: 50%;
+        bottom: -10px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .title {
+      font-size: 4em;
+    }
+
+    .sub-title {
+      font-size: 4em;
+      letter-spacing: 6px;
+    }
+  }
+
+  .btn {
+    @include button(outlined, #fff);
+    margin-top: 25px;
+    color: #fff;
+  }
+}
