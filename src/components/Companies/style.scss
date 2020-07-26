@@ -5,11 +5,15 @@
   color: $main-color;
 
   .slider {
-    height: 500px !important;
+    height: 300px !important;
 
     .previousButton polygon,
     .nextButton polygon {
       fill: #000;
+    }
+
+    @media (max-width: 1200px) {
+      height: 500px !important;
     }
   }
 
