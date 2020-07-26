@@ -19,7 +19,7 @@ const Categories: React.FC = () => {
   ];
 
   return (
-    <div className="categories">
+    <div id="categories">
       {boxes.map(({ image, label }) => (
         <div className="box">
           <img src={image} alt={label} className="box-image" />

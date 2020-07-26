@@ -1,6 +1,6 @@
 @import '../../config.scss';
 
-.categories {
+#categories {
   padding: 25px $default-spacing;
   @include flex(space-between);
   flex-wrap: wrap;
