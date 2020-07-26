@@ -44,23 +44,25 @@ const banners = [
 ];
 
 const renderBanners = ({ small, title, subTitle, cta, image }) => (
-  <div className="banner">
+  <div className="banner-container">
     <div className="banner-content">
       <span className="light">{small}</span>
       <h1 className="title bold highlight">{title}</h1>
       <h1 className="light sub-title highlight">{subTitle}</h1>
 
-      <button className="button">{cta}</button>
+      <button className="banner-button">{cta}</button>
 
-      <img src={image} alt="banner" className="banner-image" />
+      <img src={image} alt="banner image" className="banner-image" />
     </div>
   </div>
 );
 
 const Banner: React.FC = () => {
   return (
-    <section className="banner-container">
-      <Slider slideIndex={2}>{banners.map(renderBanners)}</Slider>
+    <section id="banner">
+      <Slider infinite={true} slideIndex={2}>
+        {banners.map(renderBanners)}
+      </Slider>
     </section>
   );
 };
