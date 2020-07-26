@@ -3,7 +3,11 @@ import './style.scss';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
-import banner from '../../assets/main-banner.png';
+import table from '../../assets/banner/table.jpg';
+import guitarrist from '../../assets/banner/guitarrist.jpg';
+import banner from '../../assets/banner/main-banner.png';
+import piano from '../../assets/banner/piano.jpg';
+import guitar from '../../assets/banner/guitar.jpg';
 
 const banners = [
   {
@@ -11,14 +15,14 @@ const banners = [
     title: 'SIT AMET',
     subTitle: 'PROFISSIONAIS',
     cta: 'CONFIRA',
-    image: banner,
+    image: table,
   },
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
     subTitle: 'PROFISSIONAIS',
     cta: 'CONFIRA',
-    image: banner,
+    image: guitarrist,
   },
   {
     small: 'NOVOS PRODUTOS',
@@ -32,14 +36,14 @@ const banners = [
     title: 'SIT AMET',
     subTitle: 'PROFISSIONAIS',
     cta: 'CONFIRA',
-    image: banner,
+    image: piano,
   },
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
     subTitle: 'PROFISSIONAIS',
     cta: 'CONFIRA',
-    image: banner,
+    image: guitar,
   },
 ];
 
@@ -60,7 +64,7 @@ const renderBanners = ({ small, title, subTitle, cta, image }) => (
 const Banner: React.FC = () => {
   return (
     <section id="banner">
-      <Slider infinite={true} slideIndex={2}>
+      <Slider infinite={true} autoplay={7500} slideIndex={2}>
         {banners.map(renderBanners)}
       </Slider>
     </section>
