@@ -1,0 +1,56 @@
+@import '../../config.scss';
+
+.modal-box {
+  @include flex(space-between);
+  color: $main-color;
+  padding: 50px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+.content {
+  @include flex($align: flex-start, $direction: column);
+  margin-left: 25px;
+
+  .price,
+  .link {
+    margin: 20px 0;
+  }
+
+  .title {
+    font-style: 2em;
+  }
+
+  .price {
+    font-size: 2em;
+  }
+
+  .description {
+    max-width: 300px;
+    line-height: 18px;
+  }
+
+  .link {
+    position: relative;
+    text-decoration: underline;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+
+    &::after {
+      content: '>';
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translate(0, -50%);
+      font-weight: 900;
+      transition: 0.2s ease-in-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      right: -15px;
+    }
+  }
+}
