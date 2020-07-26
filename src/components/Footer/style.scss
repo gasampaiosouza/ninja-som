@@ -1,0 +1,113 @@
+@import '../../config.scss';
+
+#footer {
+  position: absolute;
+  width: 100%;
+
+  background: $main-color;
+  color: #fff;
+  padding: 25px $default-spacing;
+
+  outline: 50px solid $main-color;
+  z-index: -1;
+
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+
+    .cards {
+      width: 100% !important;
+    }
+
+    #form input {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    $default-spacing: 25px;
+
+    padding: 25px $default-spacing;
+  }
+
+  .title {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    margin-bottom: 15px;
+
+    &.media .icon {
+      font-size: 15px;
+
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+    }
+
+    &.payment .cards {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+
+      > .card {
+        margin: 2px;
+      }
+    }
+
+    &.security img {
+      margin-right: 5px;
+      height: 42px;
+    }
+  }
+
+  a {
+    font-size: 1.2em;
+
+    > li {
+      margin: 8px 0;
+    }
+  }
+}
+
+.form-box {
+  color: $main-color;
+  background: #fff;
+  padding: 30px;
+
+  font-size: 1.4em;
+  letter-spacing: 3px;
+
+  border-radius: 10px;
+
+  #form {
+    margin-top: 25px;
+
+    .btn {
+      padding: 8px 45px;
+    }
+
+    > input {
+      color: $main-color;
+      position: relative;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $main-color;
+      padding: 10px 25px;
+
+      &::placeholder {
+        opacity: 1;
+        color: $main-color;
+      }
+    }
+  }
+}
