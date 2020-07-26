@@ -51,8 +51,11 @@
       }
 
       &-image {
+        $image-size: 100px;
         margin-right: 12px;
-        width: 80px;
+        width: $image-size;
+        height: $image-size;
+        border-radius: 50%;
       }
     }
 
