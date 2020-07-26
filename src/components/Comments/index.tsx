@@ -27,7 +27,7 @@ const Comments: React.FC = () => {
   return (
     <section id="comments">
       <div className="wrapper">
-        <Slider infinite={true}>
+        <Slider>
           {users.map((user) => (
             <div className="comments-box">
               <div className="user">
