@@ -31,14 +31,15 @@ $default-spacing: 140px;
     background: transparent;
     border: 2px solid $outline;
 
-    &:hover {
+    &:hover,
+    &:focus {
       @if $outline == $main-color {
         color: #fff !important;
       } @else {
         color: $main-color !important;
       }
       background: $outline;
-      box-shadow: 5px 5px 15px rgba($main-color, .5);
+      box-shadow: 5px 5px 15px rgba($main-color, 0.5);
     }
   }
 }
