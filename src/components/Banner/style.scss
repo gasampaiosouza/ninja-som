@@ -1,4 +1,5 @@
 @import '../../config.scss';
+@import './animation.scss';
 
 $banner-height: 650px;
 
@@ -109,37 +110,3 @@ $banner-height: 650px;
     border: 2px solid $color;
   }
 }
-
-// .animateIn .banner-content {
-//   h1 {
-//     animation: top-bottom 1s ease-in-out;
-//   }
-// }
-
-// .animateOut .banner-content {
-//   h1 {
-//     animation: bottom-top 1s ease-in-out;
-//   }
-// }
-
-// @keyframes bottom-top {
-//   from {
-//     transform: none;
-//   }
-
-//   to {
-//     opacity: 0;
-//     transform: translateY(-25px);
-//   }
-// }
-
-// @keyframes top-bottom {
-//   from {
-//     opacity: 0;
-//     transform: translateY(-25px);
-//   }
-
-//   to {
-//     transform: none;
-//   }
-// }

@@ -1,0 +1,81 @@
+.animateIn .banner-content {
+  $appear-duration: 1.5s;
+
+  span {
+    animation: appear-top $appear-duration ease-in-out;
+  }
+
+  h1 {
+    animation: appear-bottom $appear-duration ease-in-out;
+  }
+
+  button {
+    animation: appear-bottom $appear-duration ease-in-out;
+  }
+}
+
+.animateOut .banner-content {
+  $disappear-duration: 1.2s;
+
+  span {
+    animation: disappear-top $disappear-duration ease-in-out;
+  }
+
+  h1.title {
+    animation: disappear-top $disappear-duration ease-in-out;
+  }
+
+  h1.sub-title {
+    animation: disappear-bottom $disappear-duration ease-in-out;
+  }
+
+  button {
+    animation: disappear-bottom $disappear-duration ease-in-out;
+  }
+}
+
+@keyframes appear-top {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes appear-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes disappear-top {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes disappear-bottom {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
