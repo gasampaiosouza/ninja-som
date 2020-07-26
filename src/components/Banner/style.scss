@@ -1,7 +1,9 @@
 @import '../../config.scss';
-@import './animation.scss';
+@import './banner-animation.scss';
+@import '../../animation.scss';
 
 $banner-height: 650px;
+$animation-duration: 0.6s;
 
 .slider {
   height: $banner-height !important;
@@ -55,13 +57,16 @@ $banner-height: 650px;
   > span {
     letter-spacing: 5px;
     margin-bottom: 15px;
+    animation: appear-top $animation-duration ease-in-out;
   }
 
   > .highlight {
     font-size: 4em;
+    animation: appear-top $animation-duration ease-in-out;
 
     &.sub-title {
       margin-bottom: 35px;
+      animation: appear-bottom $animation-duration ease-in-out;
     }
   }
 
@@ -81,6 +86,8 @@ $banner-height: 650px;
 }
 
 .banner-button {
+  animation: appear-bottom $animation-duration ease-in-out;
+
   cursor: pointer;
   position: relative;
   background: transparent;
