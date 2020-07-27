@@ -16,8 +16,8 @@ const News: React.FC = () => {
   return (
     <div id="news">
       <Fade top cascade>
-        {news.map(({ title, subTitle, independentClass }) => (
-          <div className={`news-box ${independentClass}`}>
+        {news.map(({ title, subTitle, independentClass }, index) => (
+          <div className={`news-box ${independentClass}`} key={index}>
             <small className="label light">NOVIDADES</small>
             <h1 className="title bold">{title}</h1>
             <h1 className="sub-title regular">{subTitle}</h1>

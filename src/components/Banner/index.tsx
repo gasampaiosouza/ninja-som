@@ -47,8 +47,11 @@ const banners = [
   },
 ];
 
-const renderBanners = ({ small, title, subTitle, cta, image }) => (
-  <div className="banner-container">
+const renderBanners = (
+  { small, title, subTitle, cta, image },
+  index: number
+) => (
+  <div className="banner-container" key={index}>
     <div className="banner-content">
       <span className="light">{small}</span>
       <h1 className="title bold highlight">{title}</h1>

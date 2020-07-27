@@ -23,8 +23,8 @@ const Categories: React.FC = () => {
   return (
     <div id="categories">
       <Fade bottom cascade>
-        {boxes.map(({ image, label }) => (
-          <div className="box">
+        {boxes.map(({ image, label }, index) => (
+          <div className="box" key={index}>
             <img src={image} alt={label} className="box-image" />
             <span className="box-label bold">{label}</span>
           </div>

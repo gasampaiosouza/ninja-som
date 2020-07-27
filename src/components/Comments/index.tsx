@@ -30,8 +30,8 @@ const Comments: React.FC = () => {
     <section id="comments">
       <div className="wrapper">
         <Slider>
-          {users.map((user) => (
-            <div className="comments-box">
+          {users.map((user, index) => (
+            <div className="comments-box" key={index}>
               <Fade bottom>
                 <div className="user">
                   <img
