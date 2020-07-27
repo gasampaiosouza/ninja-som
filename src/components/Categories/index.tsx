@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.scss';
 
+import Fade from 'react-reveal/Fade';
+
 import guitarrist from '../../assets/categories/guitarrist.png';
 import microphone from '../../assets/categories/microphone.png';
 import soundTable from '../../assets/categories/sound-table.png';
@@ -20,12 +22,14 @@ const Categories: React.FC = () => {
 
   return (
     <div id="categories">
-      {boxes.map(({ image, label }) => (
-        <div className="box">
-          <img src={image} alt={label} className="box-image" />
-          <span className="box-label bold">{label}</span>
-        </div>
-      ))}
+      <Fade bottom cascade>
+        {boxes.map(({ image, label }) => (
+          <div className="box">
+            <img src={image} alt={label} className="box-image" />
+            <span className="box-label bold">{label}</span>
+          </div>
+        ))}
+      </Fade>
     </div>
   );
 };
