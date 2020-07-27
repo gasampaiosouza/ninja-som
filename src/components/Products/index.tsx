@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Items from './Items';
 
+import Fade from 'react-reveal/Fade';
+
 import './style.scss';
 import dataType from '../../interfaces';
 
@@ -26,19 +28,21 @@ const Instruments: React.FC = () => {
   if (error) return <h1>something went wrong...</h1>;
 
   return (
-    <section className="instruments" id="instruments">
-      <h1 className="section-title">
-        INSTRUMENTOS <span className="bold">DESTAQUE</span>
-      </h1>
-      <p className="section-paragraph">
-        It is a long established fact that a reader will be distracted by the
-        readable
-      </p>
+    <Fade left cascade>
+      <section className="instruments" id="instruments">
+        <h1 className="section-title">
+          INSTRUMENTOS <span className="bold">DESTAQUE</span>
+        </h1>
+        <p className="section-paragraph">
+          It is a long established fact that a reader will be distracted by the
+          readable
+        </p>
 
-      <Items data={data} />
+        <Items data={data} />
 
-      <button className="btn outlined">VER MAIS</button>
-    </section>
+        <button className="btn outlined">VER MAIS</button>
+      </section>
+    </Fade>
   );
 };
 
