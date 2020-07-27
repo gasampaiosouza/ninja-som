@@ -36,7 +36,7 @@ const Items = ({ data }: itemsType) => {
 
   const closeInfo = () => setInfo({ open: false });
 
-  if (!data) return <p>loading...</p>;
+  if (!data) return <h1>loading...</h1>;
 
   return (
     <Fade right cascade>
