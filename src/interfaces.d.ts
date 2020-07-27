@@ -4,3 +4,7 @@ export default interface dataType {
   photo?: string;
   price?: number | string;
 }
+
+export interface modalType extends dataType {
+  open: boolean;
+}
