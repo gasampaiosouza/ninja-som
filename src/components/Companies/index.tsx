@@ -13,6 +13,8 @@ import github from '../../assets/companies/github-logo.png';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
+import Fade from 'react-reveal/Fade';
+
 const Companies: React.FC = () => {
   return (
     <div id="companies">
@@ -26,10 +28,12 @@ const Companies: React.FC = () => {
 
       <Slider>
         <div className="content">
-          <img src={akg} alt="akg logo" />
-          <img src={roland} alt="roland logo" />
-          <img src={boss} alt="boss logo" />
-          <img src={shure} alt="shure logo" />
+          <Fade bottom cascade>
+            <img src={akg} alt="akg logo" />
+            <img src={roland} alt="roland logo" />
+            <img src={boss} alt="boss logo" />
+            <img src={shure} alt="shure logo" />
+          </Fade>
         </div>
         <div className="content">
           <img src={google} alt="akg logo" />
