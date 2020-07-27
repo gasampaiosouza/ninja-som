@@ -4,7 +4,7 @@
 
 ## 📟 Usage
 
-- To see the website you can simply go to **[where the it's deployed](https://ninja-som.netlify.app/)**, or if you want to install it in your machine, you can clone this repository:
+- To see the website you can simply go to **[where it's deployed](https://ninja-som.netlify.app/)**, or if you want to install it in your machine, you can clone this repository:
 
   ```
   git clone https://github.com/gasampaiosouza/ninja-som/
