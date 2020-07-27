@@ -21,6 +21,7 @@ $animation-duration: 0.6s;
   grid-template-columns: repeat(2, 1fr);
 
   .banner-image {
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
