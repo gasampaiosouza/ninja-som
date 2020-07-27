@@ -13,14 +13,14 @@ const banners = [
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
-    subTitle: 'PROFISSIONAIS',
+    subTitle: 'LIPSUM IS COOL',
     cta: 'CONFIRA',
     image: table,
   },
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
-    subTitle: 'PROFISSIONAIS',
+    subTitle: 'LIPSUM IS COOL',
     cta: 'CONFIRA',
     image: guitarrist,
   },
@@ -34,14 +34,14 @@ const banners = [
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
-    subTitle: 'PROFISSIONAIS',
+    subTitle: 'LIPSUM IS COOL',
     cta: 'CONFIRA',
     image: piano,
   },
   {
     small: 'LOREM IPSUM DOLOR',
     title: 'SIT AMET',
-    subTitle: 'PROFISSIONAIS',
+    subTitle: 'LIPSUM IS COOL',
     cta: 'CONFIRA',
     image: guitar,
   },
