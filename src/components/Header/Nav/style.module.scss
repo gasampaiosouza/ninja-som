@@ -1,4 +1,5 @@
 @import '../../../config.scss';
+@import '../../../animation.scss';
 
 .nav {
   $border-color: rgba(#ccc, 0.5);
@@ -13,6 +14,7 @@
     width: 85%;
     display: flex;
     justify-content: space-between;
+    @include addAnimation(&, appear-top, 5);
 
     > li {
       text-transform: uppercase;
