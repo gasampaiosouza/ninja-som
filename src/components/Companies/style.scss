@@ -23,12 +23,11 @@
 
     img {
       filter: grayscale(100%);
-      opacity: 0.5;
+      opacity: 0.5 !important;
       width: 210px;
-      transition: 0.2s ease-in-out;
 
       &:hover {
-        opacity: 1;
+        opacity: 1 !important;
         filter: none;
       }
     }
