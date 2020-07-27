@@ -7,10 +7,10 @@
   @include flex($direction: column);
 
   .section-paragraph {
-    color: #212121;
+    color: #222;
     max-width: 1000px;
     text-align: center;
-    opacity: 0.75;
+    opacity: 0.75 !important;
     line-height: 25px;
   }
 
