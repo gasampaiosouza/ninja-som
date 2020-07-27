@@ -1,4 +1,5 @@
 @import '../../../config.scss';
+@import '../../../animation.scss';
 
 .info {
   $info-width: 85%;
@@ -8,6 +9,7 @@
   @include flex(space-between);
   padding: 15px $default-spacing;
   color: $main-color;
+  @include addAnimation(&, appear-top, 5);
 
   > .logo {
     min-width: 135px;
