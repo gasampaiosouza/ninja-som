@@ -10,28 +10,28 @@ import style from './style.module.scss';
 const TopBar: React.FC = () => {
   const items = [
     {
+      text: (
+        <p>
+          compra <span className="bold">100% segura</span>
+        </p>
+      ),
       icon: lock,
-      text: (
-        <p>
-          compra <b>100% segura</b>
-        </p>
-      ),
     },
     {
+      text: <span className="bold">1º troca grátis</span>,
       icon: arrow,
-      text: <b>1º troca grátis</b>,
     },
     {
+      text: <span className="bold">5x sem juros</span>,
       icon: percentage,
-      text: <b>5x sem juros</b>,
     },
     {
-      icon: truck,
       text: (
         <p>
-          entregas em <b>todo o brasil</b>
+          entregas em <span className="bold">todo o brasil</span>
         </p>
       ),
+      icon: truck,
     },
   ];
 
