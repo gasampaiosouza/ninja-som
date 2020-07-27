@@ -1,8 +1,12 @@
 @import '../../../config.scss';
+@import '../../../animation.scss';
 
 .top-bar {
   color: #fff;
   min-height: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
   background: $main-color;
   padding: 0 $default-spacing;
 
@@ -22,20 +26,12 @@
   &-item {
     position: relative;
     @include flex();
+    @include addAnimation(&, appear-top, 4);
 
-    &:not(:nth-child(1))::before {
-      content: '';
-      width: 1px;
-      height: 15px;
-      background: rgba(#c4c4c4, 0.4);
+    width: 100%;
 
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
-    &:not(:first-of-type):not(:last-of-type) {
-      padding: 0 40px;
+    &:not(:nth-last-child(1)) {
+      border-right: 1px solid rgba(#c4c4c4, 0.4);
     }
   }
 
@@ -45,10 +41,7 @@
 
     &-item {
       margin: 15px 0;
-
-      &::before {
-        display: none;
-      }
+      border: 0 !important;
     }
   }
 
