@@ -44,6 +44,7 @@ const Comments: React.FC = () => {
                     <small className="user-role">{user.role}</small>
                   </div>
                 </div>
+
                 <div className="comment">
                   <p>{user.comment}</p>
                 </div>
