@@ -7,6 +7,7 @@
   text-align: center;
 
   #products {
+    margin: 25px 0;
     @include flex();
     flex-wrap: wrap;
 
