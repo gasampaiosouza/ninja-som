@@ -11,7 +11,7 @@
     @include flex(space-between, $direction: column);
 
     &:hover > .box-label {
-      opacity: 1;
+      opacity: 1 !important;
     }
 
     &:hover > .box-image {
@@ -32,7 +32,7 @@
 
     &-label {
       color: $main-color;
-      opacity: 0.5;
+      opacity: 0.5 !important;
       letter-spacing: 1px;
       font-size: 1.4em;
 
