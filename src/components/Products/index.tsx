@@ -28,7 +28,7 @@ const Instruments: React.FC = () => {
   if (error) return <h1>something went wrong...</h1>;
 
   return (
-    <Fade left cascade>
+    <Fade bottom cascade>
       <section className="instruments" id="instruments">
         <h1 className="section-title">
           INSTRUMENTOS <span className="bold">DESTAQUE</span>
