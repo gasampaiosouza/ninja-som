@@ -5,7 +5,7 @@
   }
 
   to {
-    transform: none;
+    transform: initial;
   }
 }
 
@@ -16,14 +16,13 @@
   }
 
   to {
-    transform: none;
+    transform: initial;
   }
 }
 
 @keyframes disappear-top {
   from {
-    opacity: 1;
-    transform: none;
+    opacity: initial;
   }
 
   to {
@@ -34,8 +33,7 @@
 
 @keyframes disappear-bottom {
   from {
-    opacity: 1;
-    transform: none;
+    opacity: initial;
   }
 
   to {
