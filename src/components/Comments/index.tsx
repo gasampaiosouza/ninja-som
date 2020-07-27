@@ -4,6 +4,8 @@ import './style.scss';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
+import Fade from 'react-reveal/Fade';
+
 import userImage1 from '../../assets/users/user1-image.jpg';
 
 const Comments: React.FC = () => {
@@ -30,16 +32,22 @@ const Comments: React.FC = () => {
         <Slider>
           {users.map((user) => (
             <div className="comments-box">
-              <div className="user">
-                <img src={user.image} alt="user-image" className="user-image" />
-                <div className="user-content">
-                  <span className="user-name bold">{user.name}</span>
-                  <small className="user-role">{user.role}</small>
+              <Fade bottom>
+                <div className="user">
+                  <img
+                    src={user.image}
+                    alt="user-image"
+                    className="user-image"
+                  />
+                  <div className="user-content">
+                    <span className="user-name bold">{user.name}</span>
+                    <small className="user-role">{user.role}</small>
+                  </div>
                 </div>
-              </div>
-              <div className="comment">
-                <p>{user.comment}</p>
-              </div>
+                <div className="comment">
+                  <p>{user.comment}</p>
+                </div>
+              </Fade>
             </div>
           ))}
         </Slider>
