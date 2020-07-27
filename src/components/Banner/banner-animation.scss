@@ -1,13 +1,17 @@
 @import '../../animation.scss';
 
 .animateIn .banner-content {
-  $appear-duration: 1.5s;
+  $appear-duration: 2s;
 
   span {
     animation: appear-top $appear-duration ease-in-out;
   }
 
-  h1 {
+  h1.title {
+    animation: appear-top $appear-duration ease-in-out;
+  }
+
+  h1.sub-title {
     animation: appear-bottom $appear-duration ease-in-out;
   }
 
