@@ -47,24 +47,13 @@ ul {
 }
 
 .dropdown::before {
-  content: '';
+  content: '⏷';
 
   cursor: pointer;
   position: absolute;
   right: -15px;
   top: 50%;
-  transform: translate(0, -50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 4px 0 4px;
-  border-radius: 2px;
-  border-color: $main-color transparent transparent transparent;
-  line-height: 0px;
-  _border-color: $main-color #000000 #000000 #000000;
-
-  // ie6
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  transform: translate(0, -75%);
 }
 
 .section-title {
