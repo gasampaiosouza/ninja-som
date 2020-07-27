@@ -16,7 +16,6 @@ $animation-duration: 0.6s;
 
 .banner-container {
   height: $banner-height;
-  position: relative;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
