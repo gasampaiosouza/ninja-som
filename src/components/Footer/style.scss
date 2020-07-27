@@ -2,21 +2,20 @@
 
 #footer {
   position: absolute;
-  width: 100%;
 
   background: $main-color;
   color: #fff;
-  padding: 25px $default-spacing;
+  padding: 50px $default-spacing;
 
   outline: 50px solid $main-color;
   z-index: -1;
 
   display: grid;
-  gap: 50px;
   grid-template-columns: repeat(4, 1fr);
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
   @media (max-width: 550px) {
@@ -48,7 +47,7 @@
     margin-bottom: 15px;
 
     &.media .icon {
-      font-size: 15px;
+      font-size: 1.5em;
 
       &:nth-child(2) {
         margin: 0 20px;
@@ -107,6 +106,10 @@
       &::placeholder {
         opacity: 1;
         color: $main-color;
+      }
+
+      &:focus::placeholder {
+        opacity: 0.5;
       }
     }
   }
