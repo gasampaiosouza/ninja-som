@@ -9,7 +9,7 @@
 
     .previousButton polygon,
     .nextButton polygon {
-      fill: #000;
+      fill: $main-color;
     }
 
     @media (max-width: 1200px) {
