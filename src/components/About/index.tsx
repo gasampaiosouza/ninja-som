@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 const About: React.FC = () => {
   return (
-    <Fade top cascade>
+    <Fade bottom>
       <div id="about">
         <h1 className="section-title">SOBRE NÓS</h1>
         <p className="section-paragraph">
