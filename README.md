@@ -1,5 +1,7 @@
 # 🎵 Ninja Som
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9361965f-f418-484d-912a-61532b6b3786/deploy-status)](https://app.netlify.com/sites/ninja-som/deploys)
+
 **Ninja Som** is an [econverse's](https://github.com/econverse-digital/teste-front-end-junior) _practical test_, which challenges you to build an entire website with any framework you want.
 
 ## 📟 Usage
