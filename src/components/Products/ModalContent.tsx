@@ -11,7 +11,7 @@ const ModalContent: React.FC<modalContentType> = ({ data: info }) => {
       <img src={info.photo} alt={info.productName} />
       <div className="content">
         <h1 className="title">{info.productName}</h1>
-        <span className="price bold">{info.price}</span>
+        <span className="price bold">{`R$ ${info.price}`}</span>
         <p className="description">{info.descriptionShort}</p>
         <a href="#" className="link">
           Veja mais detalhes do produto
