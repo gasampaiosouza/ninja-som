@@ -1,5 +1,7 @@
 import React, { useState, memo } from 'react';
 import dataType from '../../interfaces';
+
+import Fade from 'react-reveal/Fade';
 import './style.scss';
 import './modal.scss';
 import 'react-responsive-modal/styles.css';
@@ -37,12 +39,12 @@ const Items = ({ data }: itemsType) => {
   if (!data) return <p>loading...</p>;
 
   return (
-    <div id="products">
-      {data.map(({ photo, productName, price, descriptionShort }, index) => {
-        const priceWithComma = fixPrice(price!.toString());
+    <Fade right cascade>
+      <div id="products">
+        {data.map(({ photo, productName, price, descriptionShort }, index) => {
+          const priceWithComma = fixPrice(price!.toString());
 
-        return (
-          <>
+          return (
             <div className="products-box" key={index}>
               <img className="image" src={photo} alt={`Foto ${productName}`} />
               <div
@@ -65,31 +67,31 @@ const Items = ({ data }: itemsType) => {
               <p className="description light">{descriptionShort}</p>
               <h1 className="price">{`R$ ${priceWithComma}`}</h1>
             </div>
-          </>
-        );
-      })}
+          );
+        })}
 
-      <Modal
-        onClose={closeInfo}
-        open={info.open}
-        center={true}
-        animationDuration={250}
-      >
-        <div className="modal-box">
-          <img src={info.photo} alt={info.productName} />
-          <div className="content">
-            <h1 className="title">{info.productName}</h1>
-            <span className="price bold">{info.price}</span>
-            <p className="description">{info.descriptionShort}</p>
-            <a href="#" className="link">
-              Veja mais detalhes do produto
-            </a>
+        <Modal
+          onClose={closeInfo}
+          open={info.open}
+          center={true}
+          animationDuration={250}
+        >
+          <div className="modal-box">
+            <img src={info.photo} alt={info.productName} />
+            <div className="content">
+              <h1 className="title">{info.productName}</h1>
+              <span className="price bold">{info.price}</span>
+              <p className="description">{info.descriptionShort}</p>
+              <a href="#" className="link">
+                Veja mais detalhes do produto
+              </a>
 
-            <button className="btn solid">Adicionar ao carrinho</button>
+              <button className="btn solid">Adicionar ao carrinho</button>
+            </div>
           </div>
-        </div>
-      </Modal>
-    </div>
+        </Modal>
+      </div>
+    </Fade>
   );
 };
 
