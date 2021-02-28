@@ -35,18 +35,19 @@ const Items = ({ data }: itemsType) => {
     <div id="products">
       {data.map(({ photo, productName, price, descriptionShort }, index) => {
         const priceWithComma = fixPrice(price!.toString());
+        const data = {
+          open: true,
+          photo,
+          productName,
+          price: priceWithComma,
+          descriptionShort
+        }
 
         return (
           <Product
             key={index}
             openInfo={openInfo}
-            data={{
-              open: true,
-              photo,
-              productName,
-              price: priceWithComma,
-              descriptionShort,
-            }}
+            data={data}
           />
         );
       })}
